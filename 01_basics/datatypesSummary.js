@@ -50,3 +50,4 @@ const myFunction = function(){
 /** find data type of a variable */
 console.log(typeof bigNumber);
 console.log(typeof outsideTemp);
+console.log(typeof scoreValue);
