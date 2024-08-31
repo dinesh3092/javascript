@@ -75,3 +75,26 @@ const stopFunction = () =>{
     clearInterval(timeInterval);
 }
 
+
+
+
+/*
+  ++++++  SUMMARY    ++++++
+1. const
+2. document.getElementById('end-Date').innerText = endDate;
+3. document.querySelectorAll("input");
+4. console.log(inputs);
+5. Arrow Function    const clock = () => {}
+6. const end = new Date(endDate);
+7. const now = new Date();
+8. const days = Math.floor(((difference/3600))/24)
+9. const timeInterval = setInterval(() => {
+            clock()
+        }, 1000
+    );
+10. const stopFunction = () =>{
+        clearInterval(timeInterval);
+    }
+
+
+*/
