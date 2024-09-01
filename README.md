@@ -16,3 +16,8 @@ https://rawcdn.githack.com/dinesh3092/javascript/1a7ee552dac5aca706a8580524c7acb
 
 https://shorturl.at/910ND
 
+
+3. Quiz App
+   https://rawcdn.githack.com/dinesh3092/javascript/6a9af6018f30ffade14608d899d8f7db685b5a96/projects/quizApp/index.html
+
+   https://shorturl.at/iX2Pr
