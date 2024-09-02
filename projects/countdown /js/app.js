@@ -1,4 +1,4 @@
-const endDate = "02 September 2024 12:00 AM"
+const endDate = "31 December 2024 12:00 AM"
 //const endDate = "31 August 2024 02:46 PM"
 
 // date show dynamically on page
