@@ -28,4 +28,10 @@ https://shorturl.at/910ND
 https://rawcdn.githack.com/dinesh3092/javascript/8a48e78bd6013f91cd55c1feaed27fd8502ba411/projects/randomPasswordGenerator/index.html
 
 https://shorturl.at/BLrqw
+
+5. Notes App
+------------------------------------------------------------------
+https://rawcdn.githack.com/dinesh3092/javascript/9c58c80e8157f0643f38807756fd69f3dd8b338c/projects/notesApp/index.html
+
+https://shorturl.at/Exsd1
    
