@@ -2,22 +2,36 @@ const addBtn = document.querySelector("#addBtn");
 const main = document.querySelector("#main");
 
 
-const saveNotes = () => {
-    // alert("clicked");
-    const notes = document.querySelectorAll(".note textarea");
-    // console.log(notes);
-    const data = [];
-    notes.forEach((note)=> data.push(note.value))
-    // console.log(data);
-
-    localStorage.setItem("notes",JSON.stringify(data));
-}
 
 
 addBtn.addEventListener("click", function(){
     // alert("Clicked");
     addNote();
 })
+
+
+
+const saveNotes = () => {
+    //alert("clicked");
+    const notes = document.querySelectorAll(".note textarea");
+    //console.log(notes);
+    const data = [];
+    notes.forEach((note)=> data.push(note.value));
+    //console.log(data);
+
+    if(data.length === 0){
+        localStorage.removeItem("notes");
+    }
+    else{
+        localStorage.setItem("notes",JSON.stringify(data));
+    }
+}
+
+
+
+
+
+
 
 
 // <div class="note">
@@ -30,7 +44,7 @@ addBtn.addEventListener("click", function(){
     
 
 
-const addNote = () => {
+const addNote = (text = "") => {
     // alert("Add Note");
     const note = document.createElement("div");
     note.classList.add("note");
@@ -39,12 +53,13 @@ const addNote = () => {
             <i class="save fas fa-save"></i>
             <i class="trash fas fa-trash"></i>
         </div>
-        <textarea></textarea>
+        <textarea>${text}</textarea>
     `;
 
     // to delete note
     note.querySelector(".trash").addEventListener("click",function(){
         note.remove();
+        saveNotes();
     });
 
     // to save note
@@ -52,7 +67,31 @@ const addNote = () => {
         saveNotes();
     });
 
+   
+    note.querySelector("textarea").addEventListener("focusout", function(){
+        saveNotes();
+    })
+    
     main.appendChild(note);
     saveNotes();
 }
 
+
+
+// self calling function
+(
+    function(){
+        const lsNotes = JSON.parse(localStorage.getItem("notes"));
+        //console.log(lsNotes);
+
+        if(lsNotes === null)
+        {
+            addNote();
+        }
+        else{
+            lsNotes.forEach((lsNote) => {
+                addNote(lsNote);
+            })
+        }
+    }
+)()
